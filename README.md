@@ -76,4 +76,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Contact
-For inquiries, please contact [Scott Simon](https://github.com/SSimonPhd).
+For inquiries, please contact [Scott Simon](https://github.com/SSimonPhd). 
