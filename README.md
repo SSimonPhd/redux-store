@@ -1,4 +1,4 @@
-# 22 State Homework: Redux Store
+# State: Redux Store
 [![License: MIT](https://img.shields.io/github/license/SSimonPhd/redux-store?label=license%20&style=plastic)](https://opensource.org/licenses/MIT)
 
 ## Description
