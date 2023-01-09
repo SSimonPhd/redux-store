@@ -8,7 +8,7 @@ Refactor a fully functioning e-commerce platform, replacing the Context API with
 ## Table of Contents
 - [Core Objectives Met](#core-objectives-met)
 - [Technologies Used](#technologies-used)
-- [Screen Shot](#screen-shot)
+- [Screenshot](#screenshot)
 - [Deployed App](#deployed-application)
 - [GitHub Repo](#github-repo)
 - [License](#mit-license)
@@ -46,7 +46,7 @@ GIVEN an e-commerce platform that uses Redux to manage global state...
 - JavaScript
 - Node.js
 
-## Screen Shot
+## Screenshot
 
 ![image](https://user-images.githubusercontent.com/60651145/211326453-7b53c5d4-0b6e-4264-b971-6dc4d131056e.png)
 
