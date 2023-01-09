@@ -48,11 +48,11 @@ GIVEN an e-commerce platform that uses Redux to manage global state...
 
 ## Screen Shot
 
-Coming soon!
+![image](https://user-images.githubusercontent.com/60651145/211326453-7b53c5d4-0b6e-4264-b971-6dc4d131056e.png)
 
 ## Deployed Application
 
-Coming soon!
+https://redux-store-simon.herokuapp.com/
 
 ## MIT License
 &copy;2023 Scott Simon
