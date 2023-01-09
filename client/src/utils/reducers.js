@@ -10,16 +10,14 @@ import {
   TOGGLE_CART,
 } from './actions';
 
-//Set up Initial State, as was previously done in Global State
-const initalState = {
+const initialState = {
   products: [],
   cart: [],
   cartOpen: false,
   categories: [],
   currentCategory: '',
-}
-
-export default function reducer(state = initalState, action) {
+};
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
@@ -33,11 +31,13 @@ export default function reducer(state = initalState, action) {
         cartOpen: true,
         cart: [...state.cart, action.product],
       };
+
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
         cart: [...state.cart, ...action.products],
       };
+
     case UPDATE_CART_QUANTITY:
       return {
         ...state,
@@ -49,21 +49,25 @@ export default function reducer(state = initalState, action) {
           return product;
         }),
       };
+
     case REMOVE_FROM_CART:
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
       });
+
       return {
         ...state,
         cartOpen: newState.length > 0,
         cart: newState,
       };
+
     case CLEAR_CART:
       return {
         ...state,
         cartOpen: false,
         cart: [],
       };
+
     case TOGGLE_CART:
       return {
         ...state,
@@ -75,6 +79,7 @@ export default function reducer(state = initalState, action) {
         ...state,
         categories: [...action.categories],
       };
+
     case UPDATE_CURRENT_CATEGORY:
       return {
         ...state,
@@ -84,4 +89,6 @@ export default function reducer(state = initalState, action) {
     default:
       return state;
   }
-}
+};
+
+export default reducer;

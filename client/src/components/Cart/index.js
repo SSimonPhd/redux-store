@@ -1,28 +1,23 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useLazyQuery } from '@apollo/client';
-import { loadStripe } from '@stripe/stripe-js';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 import { QUERY_CHECKOUT } from '../../utils/queries';
-import CartItem from '../CartItem';
+import { useLazyQuery } from '@apollo/react-hooks';
+import { loadStripe } from '@stripe/stripe-js';
+import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
-  const state = useSelector((state) => { return state });
+  const state = useSelector((state) => {
+    return state;
+  });
+
   const dispatch = useDispatch();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
-  useEffect(() => {
-    if (data) {
-      stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
-      });
-    }
-  }, [data]);
 
   useEffect(() => {
     async function getCart() {
@@ -34,6 +29,14 @@ const Cart = () => {
       getCart();
     }
   }, [state.cart.length, dispatch]);
+
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
@@ -55,7 +58,6 @@ const Cart = () => {
         productIds.push(item._id);
       }
     });
-
     getCheckout({
       variables: { products: productIds },
     });

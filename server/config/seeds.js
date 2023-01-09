@@ -1,13 +1,5 @@
-const mongoose = require('mongoose');
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
-
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
 
 db.once('open', async () => {
   await Category.deleteMany();
