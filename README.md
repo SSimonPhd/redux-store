@@ -6,13 +6,13 @@
 Refactor a fully functioning e-commerce platform, replacing the Context API with Redux to manage global state.
 
 ## Table of Contents
-- [Core Objectives Met](#Core)
-- [Technologies Used](#Technologies)
-- [Screen Shot](#Screen)
-- [Deployed App](#Deployed)
-- [Demo](#Demo)
-- [License](#MIT)
-- [Questions](#Questions)
+- [Core Objectives Met](#core-objectives-met)
+- [Technologies Used](#technologies-used)
+- [Screen Shot](#screen-shot)
+- [Deployed App](#deployed-application)
+- [GitHub Repo](#github-repo)
+- [License](#mit-license)
+- [Contact](#contact)
 
 ## Core Objectives Met
 
