@@ -54,6 +54,10 @@ GIVEN an e-commerce platform that uses Redux to manage global state...
 
 https://redux-store-simon.herokuapp.com/
 
+## GitHub Repo
+
+https://github.com/SSimonPhd/redux-store
+
 ## MIT License
 &copy;2023 Scott Simon
 
